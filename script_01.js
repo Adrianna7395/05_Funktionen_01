@@ -63,11 +63,41 @@ function ausgabeNamenParams(firstName, familyName) {
     console.log("Hallo " + firstName + " " + familyName + "!");
 }
 
-ausgabeNamenParams("Maxime", "Mütze");
-ausgabeNamenParams(prompt("Vorname?"), prompt("Nachname?"));
+// ausgabeNamenParams("Maxime", "Mütze");
+// ausgabeNamenParams(prompt("Vorname?"), prompt("Nachname?"));
+
+// Vorbereitung
+// SRP single responsibility principle, one function = one job
+function ausgabeNamenParams2(firstName, familyName) {
+
+// Funktionalität: string composing
+const gap = " ";
+const outputStr = "Hallo" + gap + firstName + gap + familyName + "!"
+
+// Funktionalität: data output
+    console.log(outputStr);
+}
+
+// ausgabeNamenParams2("Maxime", "Mütze");
+
+
+// Funktionen 03b
+
+
+// Funktionalität: string composing
+output(getString("Maxime", "Mütze"));
+function getString(firstName, familyName) {
+    const gap = " ";
+    const outputStr = "Hallo" + gap + firstName + gap + familyName + "!"
+    return outputStr; // Daten zum Call, call stellt die frage und return gibt die antwort
+    // return beendet die Funktion
+}
 
 
 
 
-
-
+// Funktionalität: data output
+// output("Hallo");
+function output(outputData) {
+    console.log(outputData);
+}
