@@ -42,7 +42,9 @@ function ausgabeNamenParam(firstName) {
     const cond1 = (firstName == "");
     const cond2 = (firstName == undefined);
 
-     if (cond1 || cond2 ){
+     // if (cond1 || cond2 ){
+     if (!(firstName > " ")) // Numerische Aquivalent ASCII
+     {
         firstName = " Nobody";
      }
 
