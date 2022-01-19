@@ -7,7 +7,7 @@
 
 
 // Funktionsaufruf, call
-test();
+// test();
 
 
 
@@ -16,5 +16,53 @@ function test()
 {
     console.log("Hallo!");
 }
+
+
+// Funktionen 2
+// Parametrisierung + Datenübergabe von INNEN 
+
+// Aufruf, call
+// ausgabeNamen();
+
+// Funktion
+function ausgabeNamen() {
+    // console.log("Hallo 1!");
+    let firstName = "Anna"; // what happens in Vegas....
+    console.log("Hallo " + firstName + "!");
+}
+// refactoring
+
+// console.log(firstName); // stays in Vegas!
+
+// Funktionen 3
+// Parametrisierung und Datenübergabe von AUSSEN
+
+function ausgabeNamenParam(firstName) {
+
+    const cond1 = (firstName == "");
+    const cond2 = (firstName == undefined);
+
+     if (cond1 || cond2 ){
+        firstName = " Nobody";
+     }
+
+    console.log("Hallo " + firstName + "!");
+     }
+
+
+
+ausgabeNamenParam(" xx"); // Argumente (args), Daten für Parameter
+ausgabeNamenParam();
+ausgabeNamenParam(prompt("Vorname?"));
+
+
+
+
+
+
+
+
+
+
 
 
