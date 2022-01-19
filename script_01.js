@@ -53,15 +53,18 @@ function ausgabeNamenParam(firstName) {
 
 
 
-ausgabeNamenParam(" xx"); // Argumente (args), Daten für Parameter
-ausgabeNamenParam();
-ausgabeNamenParam(prompt("Vorname?"));
+// ausgabeNamenParam(" xx"); // Argumente (args), Daten für Parameter
+// ausgabeNamenParam();
+// ausgabeNamenParam(prompt("Vorname?"));
 
+// Funktionen - mehrere Parameter
 
+function ausgabeNamenParams(firstName, familyName) {
+    console.log("Hallo " + firstName + " " + familyName + "!");
+}
 
-
-
-
+ausgabeNamenParams("Maxime", "Mütze");
+ausgabeNamenParams(prompt("Vorname?"), prompt("Nachname?"));
 
 
 
